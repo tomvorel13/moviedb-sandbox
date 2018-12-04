@@ -6,21 +6,30 @@ import axios from "axios";
 import "./styles.css";
 
 class App extends Component {
+  state = {
+    movies: []
+  };
+
   async componentDidMount() {
     const res = await axios.get(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=${KEY}&language=en-US&page=1"
+      "https://api.themoviedb.org/3/movie/top_rated?api_key=c4f8cf8abe8461ffab5ac32209887546&language=en-US&page=1"
     );
 
-    // https://geodoo.work/hide-secure-api-keys-created-app-create-react-app/
-    // https://www.themoviedb.org/documentation/api/discover
+    const { results } = res.data;
 
-    console.log(res.data);
+    this.setState({
+      movies: results
+    });
   }
 
   render() {
+    const { movies } = this.state;
+    const list = movies.map(movie => <li>{movie.title}</li>);
+
     return (
       <div className="App">
-        <h1>MovieBox</h1>
+        <h1>movieDB</h1>
+        <ul>{list}</ul>
       </div>
     );
   }
