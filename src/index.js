@@ -37,14 +37,16 @@ class App extends Component {
           src={`http://image.tmdb.org/t/p/w185/${movie.poster_path}`}
           alt="Movie poster"
         />
-        <h2>{movie.title}</h2>
+        <p className="text-center">{movie.title}</p>
       </div>
     ));
 
     return (
       <div className="App">
         <Navbar title="movieDB" />
-        <ul>{list}</ul>
+        <div className="container">
+          <div>{list}</div>
+        </div>
       </div>
     );
   }
