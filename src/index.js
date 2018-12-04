@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 
 import axios from "axios";
 
+//Components
+import Navbar from "./components/Layout/Navbar";
+
 import "./styles.css";
 
 class App extends Component {
@@ -40,7 +43,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>movieDB</h1>
+        <Navbar title="movieDB" />
         <ul>{list}</ul>
       </div>
     );
