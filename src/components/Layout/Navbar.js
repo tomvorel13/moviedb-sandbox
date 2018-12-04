@@ -9,17 +9,18 @@ const Navbar = ({ title }) => {
   );
 };
 
+// Styles
 const NavbarWrap = styled.nav`
-  background-color: black;
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
-  padding: 0.4rem 0;
+  padding: 1rem 0;
 `;
 
 const NavHeading = styled.h1`
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-  color: white;
+  color: #000;
 `;
 
 export default Navbar;

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+//Libs
 import axios from "axios";
+import styled from "styled-components";
 
 //Components
 import Navbar from "./components/Layout/Navbar";
+import MovieCard from "./components/MovieCard";
 
 import "./styles.css";
 
@@ -32,25 +35,37 @@ class App extends Component {
   render() {
     const { movies } = this.state;
     const list = movies.map(movie => (
-      <div key={movie.id}>
-        <img
-          src={`http://image.tmdb.org/t/p/w185/${movie.poster_path}`}
-          alt="Movie poster"
-        />
-        <p className="text-center">{movie.title}</p>
-      </div>
+      <MovieCard key={movie.id} movie={movie} />
     ));
 
     return (
-      <div className="App">
-        <Navbar title="movieDB" />
-        <div className="container">
-          <div>{list}</div>
-        </div>
-      </div>
+      <AppWrapper>
+        <Container>
+          <Navbar title="movieDB" />
+          {movies ? <MovieList>{list}</MovieList> : <h1>Loading...</h1>}
+        </Container>
+      </AppWrapper>
     );
   }
 }
+
+// Styles
+const AppWrapper = styled.div`
+  background-color: #e0e0e0;
+`;
+
+const Container = styled.div`
+  max-width: 1080px;
+  background-color: white;
+  padding: 0 3.5%;
+  margin: 0 auto;
+`;
+
+const MovieList = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
