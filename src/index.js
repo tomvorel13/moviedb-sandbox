@@ -18,15 +18,17 @@ class App extends Component {
 
   async componentDidMount() {
     try {
-      const res = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=c4f8cf8abe8461ffab5ac32209887546&language=en-US&page=1"
-      );
+      setTimeout(async () => {
+        const res = await axios.get(
+          "https://api.themoviedb.org/3/movie/top_rated?api_key=c4f8cf8abe8461ffab5ac32209887546&language=en-US&page=1"
+        );
 
-      const { results } = res.data;
+        const { results } = res.data;
 
-      this.setState({
-        movies: results
-      });
+        this.setState({
+          movies: results
+        });
+      }, 3000);
     } catch (err) {
       console.log(err);
     }
@@ -42,7 +44,11 @@ class App extends Component {
       <AppWrapper>
         <Container>
           <Navbar title="movieDB" />
-          {movies ? <MovieList>{list}</MovieList> : <h1>Loading...</h1>}
+          {movies.length !== 0 ? (
+            <MovieList>{list}</MovieList>
+          ) : (
+            <h1>Loading...</h1>
+          )}
         </Container>
       </AppWrapper>
     );
@@ -57,6 +63,7 @@ const AppWrapper = styled.div`
 const Container = styled.div`
   max-width: 1080px;
   background-color: white;
+  min-height: 100vh;
   padding: 0 3.5%;
   margin: 0 auto;
 `;
