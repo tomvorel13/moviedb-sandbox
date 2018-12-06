@@ -34,12 +34,12 @@ class App extends Component {
 
 // Styles
 const AppWrapper = styled.div`
-  background-color: #e0e0e0;
+  background-color: #ffffff;
 `;
 
 const Container = styled.div`
   max-width: 1080px;
-  background-color: white;
+  background-color: #ffffff;
   min-height: 100vh;
   padding: 0 3.5%;
   margin: 0 auto;

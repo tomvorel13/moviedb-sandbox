@@ -30,6 +30,7 @@ const MovieTitle = styled.h3`
   font-weight: 300;
   text-align: center;
   font-family: "Roboto", sans-serif;
+  color: #212121;
   word-wrap: auto;
 `;
 
