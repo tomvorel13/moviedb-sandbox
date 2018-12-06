@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "./context";
 
 //Libs
-import axios from "axios";
 import styled from "styled-components";
 
 //Components
 import Navbar from "./components/Layout/Navbar";
 import MovieList from "./components/MovieList";
+import Explore from "./components/Explore";
 
 import "./styles.css";
 
@@ -23,6 +23,7 @@ class App extends Component {
               <Navbar title="movieDB" />
               <Switch>
                 <Route exact path="/" component={MovieList} />
+                <Route exact path="/explore" component={Explore} />
               </Switch>
             </Container>
           </AppWrapper>
