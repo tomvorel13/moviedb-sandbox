@@ -10,6 +10,7 @@ import styled from "styled-components";
 import Navbar from "./components/Layout/Navbar";
 import MovieList from "./components/MovieList";
 import Explore from "./components/Explore";
+import Find from "./components/Find";
 
 import "./styles.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={MovieList} />
                 <Route exact path="/explore" component={Explore} />
+                <Route exact path="/find" component={Find} />
               </Switch>
             </Container>
           </AppWrapper>
