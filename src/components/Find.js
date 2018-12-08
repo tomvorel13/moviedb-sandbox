@@ -1,7 +1,9 @@
 import React from "react";
 
+import { MainHeading } from "../styles/headings";
+
 const Find = () => {
-  return <h1>Find Component</h1>;
+  return <MainHeading>Find Component</MainHeading>;
 };
 
 export default Find;

@@ -3,16 +3,15 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "./context";
 
-//Libs
+// Styles
 import styled from "styled-components";
+import { white } from "./styles/colors";
 
-//Components
+// Components
 import Navbar from "./components/Layout/Navbar";
 import MovieList from "./components/MovieList";
 import Explore from "./components/Explore";
 import Find from "./components/Find";
-
-import "./styles.css";
 
 class App extends Component {
   render() {
@@ -37,12 +36,12 @@ class App extends Component {
 
 // Styles
 const AppWrapper = styled.div`
-  background-color: #ffffff;
+  background-color: ${white};
 `;
 
 const Container = styled.div`
   max-width: 1080px;
-  background-color: #ffffff;
+  background-color: ${white};
   min-height: 100vh;
   padding: 0 3.5%;
   margin: 0 auto;

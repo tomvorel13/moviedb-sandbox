@@ -1,7 +1,9 @@
 import React from "react";
 
+import { MainHeading } from "../styles/headings";
+
 const Explore = () => {
-  return <h1>Explore</h1>;
+  return <MainHeading>Explore</MainHeading>;
 };
 
 export default Explore;

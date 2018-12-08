@@ -1,5 +1,8 @@
 import React from "react";
+
+// Styles
 import styled from "styled-components";
+import { black } from "../styles/colors";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -30,7 +33,7 @@ const MovieTitle = styled.h3`
   font-weight: 300;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  color: #212121;
+  color: ${black};
   word-wrap: auto;
 `;
 

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Consumer } from "../context";
 
-//libs
+// Libs
 import styled from "styled-components";
+import { MainHeading } from "../styles/headings";
 
 // Components
 import MovieCard from "./MovieCard";
@@ -37,14 +38,6 @@ const MovieListWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`;
-
-const MainHeading = styled.h1`
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #212121;
-  margin: 3rem 0;
 `;
 
 export default MovieList;

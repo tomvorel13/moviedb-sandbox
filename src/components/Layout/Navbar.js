@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
+// Styles
+import { black, white } from "../../styles/colors";
+
 import { Link } from "react-router-dom";
 
 const Navbar = ({ title }) => {
@@ -20,10 +24,10 @@ const NavbarWrap = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${white};
   font-family: "Roboto", sans-serif;
   padding: 1rem 0;
-  border-bottom: 2px solid #212121;
+  border-bottom: 2px solid ${black};
   margin: 0;
 `;
 
@@ -31,9 +35,9 @@ const NavHeading = styled.h1`
   font-size: 2rem;
   font-weight: 400;
   margin: 0;
-  color: #ffffff;
+  color: ${white};
   padding: 0.5rem 0.8rem;
-  background-color: #212121;
+  background-color: ${black};
 `;
 
 const NavMenu = styled.div`
@@ -42,7 +46,7 @@ const NavMenu = styled.div`
 
 const NavbarLink = styled(Link)`
   text-decoration: none;
-  color: #212121;
+  color: ${black};
   font-size: 1.2rem;
   margin-right: 1rem;
 
