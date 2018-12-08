@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Styles
 import { black, white } from "../../styles/colors";
+import { Roboto } from "../../styles/fonts";
 
 import { Link } from "react-router-dom";
 
@@ -25,7 +26,7 @@ const NavbarWrap = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: ${white};
-  font-family: "Roboto", sans-serif;
+  font-family: ${Roboto};
   padding: 1rem 0;
   border-bottom: 2px solid ${black};
   margin: 0;

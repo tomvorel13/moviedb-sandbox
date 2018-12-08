@@ -3,6 +3,7 @@ import React from "react";
 // Styles
 import styled from "styled-components";
 import { black } from "../styles/colors";
+import { Roboto } from "../styles/fonts";
 
 const MovieCard = ({ movie }) => {
   return (
@@ -32,7 +33,7 @@ const MovieTitle = styled.h3`
   font-size: 1.3rem;
   font-weight: 300;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: ${Roboto};
   color: ${black};
   word-wrap: auto;
 `;
