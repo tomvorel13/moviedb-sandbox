@@ -19,6 +19,8 @@ export class Provider extends Component {
 
         const { results } = res.data;
 
+        console.log(results);
+
         this.setState({
           movies: results
         });

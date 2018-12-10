@@ -10,8 +10,8 @@ import { white } from "./styles/colors";
 // Components
 import Navbar from "./components/Layout/Navbar";
 import MovieList from "./components/MovieList";
-import Explore from "./components/Explore";
-import Find from "./components/Find";
+import Explore from "./components/pages/Explore/Explore";
+import Find from "./components/pages/Find/Find";
 
 class App extends Component {
   render() {

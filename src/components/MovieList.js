@@ -3,7 +3,6 @@ import { Consumer } from "../context";
 
 // Libs
 import styled from "styled-components";
-import { MainHeading } from "../styles/headings";
 
 // Components
 import MovieCard from "./MovieCard";
@@ -20,7 +19,6 @@ class MovieList extends Component {
           ));
           return (
             <>
-              <MainHeading>Top 20 Movies</MainHeading>
               {movies.length !== 0 ? (
                 <MovieListWrapper>{list}</MovieListWrapper>
               ) : (
@@ -35,9 +33,8 @@ class MovieList extends Component {
 }
 
 const MovieListWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 50rem;
 `;
 
 export default MovieList;

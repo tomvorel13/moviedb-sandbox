@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MainHeading } from "../styles/headings";
+import { MainHeading } from "../../../styles/headings";
 
 const Explore = () => {
   return <MainHeading>Explore</MainHeading>;

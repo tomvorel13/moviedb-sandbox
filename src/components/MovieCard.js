@@ -14,28 +14,41 @@ const MovieCard = ({ movie }) => {
           alt="Movie poster"
         />
       </ImageWrap>
-      <MovieTitle>{movie.title}</MovieTitle>
+      <CardContentWrap>
+        <MovieTitle>{movie.title}</MovieTitle>
+        <MovieOverview>{movie.overview}</MovieOverview>
+      </CardContentWrap>
     </Card>
   );
 };
 
 // Styles
 const Card = styled.div`
-  max-width: 185px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
 `;
-const Poster = styled.img``;
-const ImageWrap = styled.div`
-  height: 278px;
+const Poster = styled.img`
+  max-width: 120px;
 `;
+const ImageWrap = styled.div``;
 const MovieTitle = styled.h3`
-  font-size: 1.3rem;
-  font-weight: 300;
-  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
   font-family: ${Roboto};
+  margin: 0 0 0.7rem 0;
   color: ${black};
   word-wrap: auto;
+`;
+
+const CardContentWrap = styled.div`
+  padding: 0 1rem;
+  text-align: left;
+`;
+
+const MovieOverview = styled.p`
+  margin: 0;
+  font-family: ${Roboto};
+  font-weight: 300;
 `;
 
 export default MovieCard;
