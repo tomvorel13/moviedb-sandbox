@@ -34,7 +34,10 @@ class MovieCard extends Component {
             </ReadMoreAndLess>
           </MovieOverview>
           <MovieRatingWrap>
-            <Star size="30px" /> <AvgRating>{movie.vote_average}</AvgRating>
+            <Label>Average Rating</Label>
+            <Wrap>
+              <Star size="20px" /> <AvgRating>{movie.vote_average}</AvgRating>
+            </Wrap>
           </MovieRatingWrap>
         </CardContentWrap>
       </Card>
@@ -77,6 +80,14 @@ const MovieRatingWrap = styled.div``;
 
 const AvgRating = styled.span`
   font-size: 1.6rem;
+  font-family: ${Roboto};
+  color: ${black};
+`;
+
+const Wrap = styled.div``;
+
+const Label = styled.span`
+  font-size: 0.7rem;
   font-family: ${Roboto};
   color: ${black};
 `;
